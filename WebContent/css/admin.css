@@ -1,0 +1,75 @@
+/* admin.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/fondo_login.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Evita que el fondo se desplace */
+}
+
+.admin-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-height: 80vh; /* Limita la altura máxima */
+    overflow-y: auto; /* Permite desplazarse si el contenido excede la altura */
+}
+
+.admin-box h1, .admin-box h2 {
+    color: #4CAF50; /* Color verde */
+    margin-bottom: 20px;
+}
+
+.admin-box label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.admin-box input,
+.admin-box textarea,
+.admin-box select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.admin-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.admin-box button:hover {
+    background-color: #45a049;
+}
+
+.admin-box p {
+    margin: 15px 0;
+}
+
+.admin-box .error-message {
+    color: red;
+}
+
+.admin-box ul {
+    text-align: left;
+    margin-bottom: 20px;
+}

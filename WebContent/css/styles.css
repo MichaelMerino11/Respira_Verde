@@ -1,54 +1,115 @@
-@charset "UTF-8";
+/* styles.css */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-family: 'Nunito', sans-serif;
 }
 
-h1, h3 {
-    color: #333;
+.navbar {
+    background-color: transparent !important;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
 }
 
-nav ul li {
-    display: inline;
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-link {
+    color: #000 !important;
+}
+
+.parallax {
+    height: 100vh; /* Altura de la ventana del navegador para todas las secciones parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax1 {
+    background-image: url('../imagenes/paralax1.jpg');
+}
+
+.parallax2 {
+    background-image: url('../imagenes/paralax4.jpg');
+}
+
+.parallax3 {
+    background-image: url('../imagenes/paralax6.jpg');
+}
+
+.content {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInUp 2s forwards;
+}
+
+.animated-title {
+    color: white;
+    height: 300px;
+}
+
+.login-icon {
+    width: 30px;
+    height: auto;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-20%, 50%);
+    }
+    to {	
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+    transform: translateY(100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+}
+
+.footer-content p {
+    margin: 0;
     margin-right: 20px;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
+.footer-content img {
+    width: 30px; /* Ajusta el tamaño de los iconos según lo necesites */
+    margin-right: 10px;
 }
 
-form {
-    margin-top: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-input[type="number"], textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-}
-
-h2 {
-    margin-top: 20px;
+.show-footer {
+    transform: translateY(0%);
 }

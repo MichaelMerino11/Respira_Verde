@@ -38,7 +38,7 @@ public class CalcularHuellaServlet extends HttpServlet {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("usuario.jsp?error=2");
+            response.sendRedirect(request.getContextPath() + "/vista/usuario.jsp?error=2");
             return;
         }
 
@@ -46,6 +46,6 @@ public class CalcularHuellaServlet extends HttpServlet {
         huellaTotal += consumoEnergia * 0.5;
         huellaTotal += consumoAgua / 1000.0;
 
-        response.sendRedirect("usuario.jsp?resultado=" + huellaTotal);
+        response.sendRedirect(request.getContextPath() + "/vista/usuario.jsp?resultado=" + huellaTotal);
     }
 }

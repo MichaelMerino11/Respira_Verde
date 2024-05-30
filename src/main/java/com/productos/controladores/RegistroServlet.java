@@ -30,7 +30,7 @@ public class RegistroServlet extends HttpServlet {
         
         if (existeUsuario(nombre, email)) {
             // Redirigir a registro.jsp con mensaje de error
-            response.sendRedirect("registro.jsp?error=duplicado");
+            response.sendRedirect(request.getContextPath() + "/vista/registro.jsp?error=duplicado");
             return;
         }
         
@@ -45,10 +45,10 @@ public class RegistroServlet extends HttpServlet {
             ps.setString(4, hashedPassword);
             ps.setString(5, usuario.getRol());
             ps.executeUpdate();
-            response.sendRedirect("login.jsp");
+            response.sendRedirect(request.getContextPath() + "/vista/login.jsp");
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("registro.jsp?error=1");
+            response.sendRedirect(request.getContextPath() + "/vista/registro.jsp?error=1");
         }
     }
     

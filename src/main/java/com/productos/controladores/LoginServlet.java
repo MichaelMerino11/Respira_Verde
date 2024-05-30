@@ -39,16 +39,16 @@ public class LoginServlet extends HttpServlet {
                 session.setAttribute("usuario", email);
                 session.setAttribute("rol", rol);
                 if ("admin".equals(rol)) {
-                    response.sendRedirect("admin.jsp");
+                    response.sendRedirect(request.getContextPath() + "/vista/admin.jsp");
                 } else {
-                    response.sendRedirect("usuario.jsp");
+                    response.sendRedirect(request.getContextPath() + "/vista/usuario.jsp");
                 }
             } else {
-                response.sendRedirect("login.jsp?error=1");
+                response.sendRedirect(request.getContextPath() + "/vista/login.jsp?error=1");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("login.jsp?error=2");
+            response.sendRedirect(request.getContextPath() + "/vista/login.jsp?error=2");
         }
     }
 }

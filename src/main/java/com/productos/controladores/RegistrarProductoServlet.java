@@ -26,7 +26,7 @@ public class RegistrarProductoServlet extends HttpServlet {
         
         if (existeProducto(nombre)) {
             // Redirigir a admin.jsp con mensaje de error
-            response.sendRedirect("admin.jsp?error=duplicado");
+            response.sendRedirect(request.getContextPath() + "/vista/admin.jsp?error=duplicado");
             return;
         }
 
@@ -37,10 +37,10 @@ public class RegistrarProductoServlet extends HttpServlet {
             ps.setString(2, producto.getDescripcion());
             ps.setInt(3, producto.getValor_carbono());
             ps.executeUpdate();
-            response.sendRedirect("admin.jsp");
+            response.sendRedirect(request.getContextPath() + "/vista/admin.jsp");
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("admin.jsp?error=1");
+            response.sendRedirect(request.getContextPath() + "/vista/admin.jsp?error=1");
         }
     }
     

@@ -1,0 +1,11 @@
+/* terminosCondiciones.css */
+
+h1 {
+    color: #333; /* Cambia el color del título a gris oscuro */
+    margin-top: 50px; /* Ajusta el margen superior del título */
+}
+
+p {
+    color: #666; /* Cambia el color del texto a gris medio */
+    line-height: 1.6; /* Ajusta el espaciado entre líneas */
+}
