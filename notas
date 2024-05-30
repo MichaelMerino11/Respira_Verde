@@ -1,0 +1,37 @@
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    edad INT NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(100) NOT NULL,
+    rol VARCHAR(20) NOT NULL CHECK (rol IN ('admin', 'usuario'))
+);
+
+CREATE TABLE productos (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    descripcion TEXT,
+    valor_carbono INT NOT NULL
+);
+
+CREATE TABLE sesiones (
+    id SERIAL PRIMARY KEY,
+    usuario_id INT REFERENCES usuarios(id),
+    token VARCHAR(255) NOT NULL,
+    fecha_inicio TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    fecha_fin TIMESTAMP
+);
+
+INSERT INTO usuarios (nombre, edad, email, password, rol) VALUES
+('Admin', 30, 'admin@respiraverde.com', 'admin123', 'admin'),
+('Usuario1', 25, 'usuario1@respiraverde.com', 'usuario123', 'usuario');
+
+INSERT INTO productos (nombre, descripcion, valor_carbono) VALUES
+('Televisor', 'Televisor LED 42 pulgadas', 100),
+('Refrigerador', 'Refrigerador de doble puerta', 150),
+('Aire acondicionado', 'Aire acondicionado de 12000 BTU', 200);
+
+SELECT * FROM usuarios;
+SELECT * FROM productos;
+
+https://www.base64encode.org/
