@@ -33,11 +33,13 @@
 		</ul>
 	</nav>
 
-    <div class="parallax parallax1">
-        <div class="title-container">
-            <img src="../imagenes/titulo.png" alt="Respira Verde" class="animated-title">
-        </div>
-    </div>
+	<div class="parallax parallax1 darkened">
+		<div class="title-container">
+			<img src="../imagenes/titulo.png" alt="Respira Verde"
+				class="animated-title">
+		</div>
+	</div>
+
 	<div class="content">
 		<h2>Importancia del Aire Limpio</h2>
 		<p>El aire limpio es esencial para nuestra salud y bienestar. La
@@ -58,32 +60,42 @@
 	</div>
 	<div class="parallax parallax3"></div>
 	<div class="content">
-		<h2>Calcula Tu Huella de Carbono</h2>
-		<p>Utiliza nuestra calculadora de huella de carbono para evaluar
-			el impacto ambiental de tu hogar. Ingresa información sobre tus
-			electrodomésticos y consumo de recursos para obtener un informe
-			detallado. ¡Cada pequeña acción cuenta para hacer una gran
-			diferencia!</p>
+		<h2>Validación CSS</h2>
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img
+				style="border: 0; width: 88px; height: 31px"
+				src="http://jigsaw.w3.org/css-validator/images/vcss"
+				alt="¡CSS Válido!" />
+			</a>
+		</p>
+		<h2>Descarga el PDF de validación CSS:</h2>
+		<embed src="../archivos_externos/PruebaCSS_Merino.pdf"
+			type="application/pdf" width="100%" height="600px" />
+		<h3>¿Deseas ver el código completo?</h3>
+		<h4>Ingresa a:</h4>
+		<a href="https://github.com/MichaelMerino11/Respira_Verde">GitHub</a>
 	</div>
+
 	<footer>
 		<div class="footer-content">
-			<p>Autores: Tu Nombre</p>
+			<p>Autor: Michael Merino</p>
 			<!-- Reemplaza "Tu Nombre" con tu nombre real -->
 			<div>
 				<a href="#"><img
 					src="<%=request.getContextPath()%>/imagenes/facebook.png"
-					alt="Facebook"></a> <a href="#"><img
+					alt="Facebook"></a> <a href="www.facebook.com"><img
 					src="<%=request.getContextPath()%>/imagenes/instagram.png"
 					alt="Instagram"></a> <a href="#"><img
 					src="<%=request.getContextPath()%>/imagenes/twitter.png"
-					alt="Twitter"></a> <a href="#"><img
+					alt="Twitter"></a> <a
+					href="https://www.linkedin.com/in/michael-merino-0b7871207/"><img
 					src="<%=request.getContextPath()%>/imagenes/linkedin.png"
 					alt="LinkedIn"></a>
 			</div>
 			<p>&copy; 2024 Respira Verde</p>
 		</div>
 		<div>
-			<p>Contactanos: info@respiraverde.com</p>
+			<p>Contactanos: maikijunior9@gmail.com</p>
 		</div>
 	</footer>
 

@@ -27,10 +27,11 @@
 					el cambio entre millones de personas. Si estás interesado en
 					trabajar conmigo, te comparto mi link de LinkedIn y poder
 					contactarnos: <a
-						href="https://www.linkedin.com/in/michael-merino-0b7871207/"><img
-						src="<%=request.getContextPath()%>/css/linkedin.png"
-						alt="LinkedIn" class="linkedin-icon"></a>
+						href="https://www.linkedin.com/in/michael-merino-0b7871207/">Linkedin</a>
 				</p>
+        <div class="button-container">
+            <a href="index.jsp" class="btn">Regresar a la Página Principal</a>
+        </div>
 			</div>
 		</div>
 	</div>

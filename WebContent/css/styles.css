@@ -32,19 +32,20 @@ p {
 }
 
 .parallax1 {
-    background-image: url('../imagenes/paralax1.jpg');
+    background-image: url('../imagenes/paralax9.jpg');
 }
 
 .parallax2 {
-    background-image: url('../imagenes/paralax4.jpg');
+    background-image: url('../imagenes/paralax8.jpg');
 }
 
 .parallax3 {
-    background-image: url('../imagenes/paralax6.jpg');
+    background-image: url('../imagenes/paralax10.jpg');
 }
 
 .content {
     padding: 50px;
+    margin-bottom: 50px;
     background-color: white;
     text-align: center;
 }

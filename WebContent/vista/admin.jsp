@@ -41,6 +41,7 @@ if (s == null || s.getAttribute("usuario") == null) {
                 <textarea id="descripcion" name="descripcion" required></textarea><br> 
                 <label for="valor_carbono">Valor de Carbono:</label> 
                 <input type="number" id="valor_carbono" name="valor_carbono" required><br>
+                <span>Bajo: < 100 kg CO2 <br> Moderado: 100 kg CO2 - 500 kg CO2 <br> Alto: > 500 kg CO2</span><br>
 
                 <%
                 if ("duplicado".equals(request.getParameter("error"))) {
